@@ -1,6 +1,6 @@
 # Twisted Frequency 2024 Projection Source
 
-This repo stores the sources for all files used in the production of TF24
+This repo stores the source data used in the production of TF24
 
 # [Koura stage](koura/)
 
