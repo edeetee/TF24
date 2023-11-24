@@ -1,10 +1,10 @@
 # Twisted Frequency 2024 Projection Source
 
-# Source files
-
 ## [Koura stage](koura/)
 
-# Contributions
+---
+
+## Contributions
 
 - Make an example project in your favourite visuals program
 - Make some loops and distribute them on google drive
