@@ -1,7 +1,7 @@
-# Simple files
+# Simple
 [Go to google drive](https://drive.google.com/drive/folders/1yIcADvoC-GmD-rNyaNwtiilgJClRLQcU) for the simple files and documentation
 
-# Important Files
+# Intermediate
 
 ## koura_template_map(.svg/.png)
 
@@ -25,7 +25,7 @@ Renders using the 3d models so that you can do fancy stuff
 
 ---
 
-# Development files
+# Advanced
 
 ## koura_main_stage_models.blend
 
