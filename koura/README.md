@@ -1,3 +1,6 @@
+# Simple files
+(Go to the google drive folder)[https://drive.google.com/drive/folders/1yIcADvoC-GmD-rNyaNwtiilgJClRLQcU] for the simple files and documentation
+
 # Important Files
 
 ## koura_template_map(.svg/.png)
