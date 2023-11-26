@@ -9,7 +9,7 @@ This is the template for the projection mapping. It is a 2D representation of th
 
 ## previs.toe
 
-Touchdesigner file to prototype visuals on the stage
+Touchdesigner file to prototype visuals on the stage. Run this file and pipe NDI into touchdesigner to prototype with the stage.
 
 ## koura_model.fbx
 
