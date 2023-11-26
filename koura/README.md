@@ -13,7 +13,7 @@ Touchdesigner file to prototype visuals on the stage. Run this file and pipe NDI
 
 ## koura_model.fbx
 
-Contains stage elements relevant for projection mapping.
+Contains stage elements relevant for projection mapping along with UV maps aligned to the mapping template
 
 Also contains prototype projector positions (as cameras)
 
