@@ -3,3 +3,5 @@
 *.blend1
 TDImportCache
 Backup
+**/outputs/
+*.mov
