@@ -1,4 +1,5 @@
 # Simple
+
 [Go to google drive](https://drive.google.com/drive/folders/1yIcADvoC-GmD-rNyaNwtiilgJClRLQcU) for the simple files and documentation
 
 # Intermediate
@@ -17,11 +18,13 @@ Contains stage elements relevant for projection mapping along with UV maps align
 
 Also contains prototype projector positions (as cameras)
 
-## koura_gen.toe
+## [loops](loops/)
 
-Use this file to generate template mapped assets in touchdesigner.
+Example projects in touchdesigner & blender to create loops using the stage data
 
-Renders using the 3d models so that you can do fancy stuff
+## [stills](stills/)
+
+Example projects in touchdesigner to create stills using the stage data
 
 ---
 
