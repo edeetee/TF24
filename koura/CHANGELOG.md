@@ -1,3 +1,9 @@
+# 3
+
+- Added speakers
+- Fixed pixel misalignment
+- Separated fbx stage and scene to different files
+
 # 2
 
 - Separated working files into experiments, loops & stills
