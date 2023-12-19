@@ -1,1 +1,1 @@
-ffmpeg -framerate 60 -pattern_type glob -i "$1" -c:v libx264 -pix_fmt yuv420p out.mp4
+ffmpeg -framerate 60 -pattern_type glob -i "$1" -c:v prores -pix_fmt yuv420p "$2"

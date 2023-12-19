@@ -29,9 +29,11 @@ def execute():
     reprojection_collection = bpy.data.collections[reprojection_collection_name]
 
     reprojection_collection.hide_render = True
+    # reprojection_collection.hide_viewport = False
 
     image_name = render_collection_name + "_BakedTexture"
     img = bpy.data.images.new(image_name, 3840, 2160, alpha=True)
+    img.colorspace_settings.name = "AgX Base sRGB"
 
     # Set the frame range and frame step
     start_frame = scene.frame_start
@@ -82,7 +84,11 @@ def execute():
         bpy.ops.render.render(write_still=True)
         render_collection.hide_render = True
 
-        rendered_image = bpy.data.images[RENDER_TEXTURE_NAME]
+        # rendered_image = bpy.data.images[RENDER_TEXTURE_NAME]
+
+        reprojection_collection.hide_render = False
+        reprojection_collection.hide_viewport = False
+        reprojection_collection.hide_select = False
 
         for obj in reprojection_collection.objects:
             mat = obj.active_material
@@ -90,20 +96,26 @@ def execute():
             texture_node = nodes[RENDER_TEXTURE_NODE_NAME]
             texture_node.image = bpy.data.images.load(render_filepath)
             nodes.active = nodes[BAKE_NODE_NAME]
+            # obj.select_set(True)
+            # texture_node.image.colorspace_settings.name = "AgX Base sRGB"
+            #  = obj
+            # obj.hide_set(False)
+            print(bpy.context.view_layer.objects.active)
+            bpy.ops.object.bake(
+                type=BAKE_TYPE,
+                # save_mode="EXTERNAL",
+                use_selected_to_active=False,
+                # pass_filter=BAKE_PASS_FILTER,
+            )
+            # img.save()
 
-        bpy.context.view_layer.objects.active = obj
-        reprojection_collection.hide_render = False
-        bpy.ops.object.bake(
-            type=BAKE_TYPE,
-            save_mode="EXTERNAL",
-            use_selected_to_active=False,
-            # pass_filter=BAKE_PASS_FILTER,
-        )
         reprojection_collection.hide_render = True
+        reprojection_collection.hide_viewport = True
+        reprojection_collection.hide_select = True
 
         # Save the baked image
         path = f"{folder}/{obj.name}_{frame:04}.png"
-        img.save_render(path)
+        img.save(filepath=path)
 
         print(f"Baked {frame}/{end_frame-start_frame}")
 
